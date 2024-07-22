@@ -21,7 +21,7 @@
       </i>
       <i (click)="onNoClick()" class=" close fa-solid fa-xmark fs-4 p-4"></i>
     </div>
-    
+
   </section>
 
 
@@ -53,20 +53,20 @@
 
 <!-- ================================== -->
 
-  
-  
+
+
       <div class="w-100 ">
 
     <mat-form-field class="w-100" appearance="outline" >
         <mat-label>Toppings</mat-label>
-        <mat-select formControlName="students" multiple  
+        <mat-select formControlName="students" multiple
          >
-        
+
           <mat-option *ngFor="let topping of tableStudents"
            [value]="topping._id"  >{{topping.email}}</mat-option>
         </mat-select>
       </mat-form-field>
-      
+
 
 </div>
 
@@ -84,7 +84,7 @@
 appearance="outline"
 [selectOnTab]="true"
 placeholder="Emails : "
- [(ngModel)]="selectedCar" [multiple]="true" 
+ [(ngModel)]="selectedCar" [multiple]="true"
 
 [searchable]="true">
 
@@ -94,7 +94,7 @@ placeholder="Emails : "
    [value]="topping._id">{{topping.email}}</ng-option>
 
 
-  
+
 
 
 
@@ -181,7 +181,7 @@ placeholder="Emails : "
   </a>
 
   <div class=" text-center">
-    <img src="../../../../../../../../assets/images/no-data.png" class="w-25" alt="">
+    <img src="./assets/images/no-data.png" class="w-25" alt="">
     <h3>Delete This Group?
       (<span class="fw-bold">{{data.item.name}}</span>)
     </h3>

@@ -5,7 +5,7 @@
         <h4 *ngIf="!title">Dashboard</h4>
         <h4 *ngIf="title">{{ title }}</h4>
         <div class="navCaption  d-flex align-items-center justify-content-center  "  *ngIf="role=='Instructor'">
-          <img src="../../../../../assets/images/alert.png " class="d-inline-block mx-2" alt="">
+          <img src="./assets/images/alert.png " class="d-inline-block mx-2" alt="">
           <h6 class="m-2" (click)="openAddEditQuizes()">New quiz</h6>
         </div>
       </div>

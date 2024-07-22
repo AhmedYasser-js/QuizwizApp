@@ -4,7 +4,7 @@
     <section class="heder w-100 ">
 
         <div (click)="openDialogAddEdit('add','')" class="titel ms-auto  d-flex align-items-center justify-content-center  ">
-             <img src="../../../../../../assets/images/alert.png " 
+             <img src="./assets/images/alert.png "
              class="d-inline-block mx-2" alt="">
              <h6 class="m-2">Add Group</h6>
            </div>
@@ -20,12 +20,12 @@
 <section class="row">
     <ng-container *ngIf="tableGroub.length!=0" >
 
-   
+
   <section  *ngFor="let item of tableGroub" class="col-md-6 my-2 ">
     <div class="cards px-3 d-flex justify-content-between align-items-center">
-      
+
         <div class=" cardCaption  w-50 ">
-           <h5 class="pt-2">Group : {{item.name}}</h5> 
+           <h5 class="pt-2">Group : {{item.name}}</h5>
            <p>No. of students : {{item.students.length}}</p>
 
         </div>
@@ -35,7 +35,7 @@
             <i (click)="openDialogAddEdit('edit',item)"
              class="fa-solid fa-pen-to-square fs-4 mx-1
              text-mainColor_lightGreen"></i>
-            <i class="fa-solid fa-trash-arrow-up fs-4 mx-1 text-danger" 
+            <i class="fa-solid fa-trash-arrow-up fs-4 mx-1 text-danger"
             (click)="openDialogAddEdit('delet',item)"></i>
 
 
@@ -53,11 +53,11 @@
 
   <section *ngIf="tableGroub.length==0" class="noData w-50  m-auto">
  <h2 class="text-center text-danger">No Data</h2>
-<img src="../../../../../../assets/images/noDataA.png" class="w-100" alt="noData" 
+<img src="./assets/images/noDataA.png" class="w-100" alt="noData"
 >
   </section>
 
- 
+
 
 
 
