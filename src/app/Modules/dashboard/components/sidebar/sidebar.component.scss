@@ -1,0 +1,86 @@
+
+@import "../../../../../assets/styles/layout";
+
+
+
+
+section {
+  height: 100%;
+  // height: 100vh;
+  // padding: 0px;
+  // position: fixed;
+
+
+}
+
+
+.sidebar ul {
+  list-style: none;
+  width: 100%;
+}
+ol, ul {
+  padding-left: 0rem;
+}
+.sidebar li {
+  width: 100%;
+  margin: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  &.icons {
+    height: 79px;
+    padding-inline: 2.5rem;
+  }
+}
+
+.sidebar .linksModules {
+  color:black;
+  padding: 1.6rem;
+  text-decoration: none;
+  display: block;
+  i {
+    font-size: 30px;
+    background-color: $mainColor_light;
+    padding: 10px;
+    margin-right: 6px;
+    border-radius: 5px;
+  }
+  span {
+      font-size: 18px;
+      font-weight: 700;
+  }
+
+  &:hover {
+    background-color: #efefef;
+    border-right: $mainColor_dark 4px solid;
+    i {
+      background-color: $mainColor_dark;
+      color: #fff;
+    }
+  }
+
+
+  &.active  {
+    // background-color: #efefef;
+    border-right: $mainColor_dark 4px solid;
+    i {
+      background-color: $mainColor_dark;
+      color: #fff;
+    }
+  }
+
+
+
+}
+
+
+.fa-regular {
+  font-size: 35px;
+  font-weight: 500;
+}
+
+
+
+.sticky {
+  position: sticky;
+  top: 0;
+  z-index: 99;
+}

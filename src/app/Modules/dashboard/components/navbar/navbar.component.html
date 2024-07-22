@@ -1,0 +1,52 @@
+<section class=" w-100  border border-start-0 border-top-0 border-end-0 border-1" id="navBar">
+  <section class="w-100 ">
+    <div class="d-flex justify-content-between">
+      <div class=" d-flex justify-content-between align-items-center w-65 px-3">
+        <h4 *ngIf="!title">Dashboard</h4>
+        <h4 *ngIf="title">{{ title }}</h4>
+        <div class="navCaption  d-flex align-items-center justify-content-center  "  *ngIf="role=='Instructor'">
+          <img src="../../../../../assets/images/alert.png " class="d-inline-block mx-2" alt="">
+          <h6 class="m-2" (click)="openAddEditQuizes()">New quiz</h6>
+        </div>
+      </div>
+      <!-- * -->
+      <div class="vertical-line"></div>
+      <div class="navIcon"><i class="fa-solid fa-language"></i></div>
+      <div class="vertical-line"></div>
+      <div class="navIcon"><i class="fa-solid fa-circle-half-stroke"></i></div>
+      <div class="vertical-line"></div>
+      <!-- * -->
+      <div class=" navProfiole  pe-4 d-flex justify-content-between align-items-center w-25 ">
+        <!-- border border-end-0 border-top-0 border-bottom-0 -->
+        <div class="">
+          <h5 class="fw-semibold name">{{name}}</h5>
+          <p class="text-mainColor_lightGreen fw-semibold">{{role}}</p>
+        </div>
+        <div class="">
+          <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+            <mat-icon>
+              expand_more
+            </mat-icon>
+          </button>
+          <mat-menu #menu="matMenu">
+            <button mat-menu-item (click)="viewProfile()">
+              <mat-icon>manage_accounts</mat-icon>
+              <span>Edit Profile</span>
+            </button>
+            <button mat-menu-item (click)="ChangePassword()">
+              <mat-icon>lock_open</mat-icon>
+              <span>Change password</span>
+            </button>
+            <button mat-menu-item (click)="openDialog('1700ms', '500ms')">
+              <mat-icon>logout</mat-icon>
+              <span>logout</span>
+            </button>
+          </mat-menu>
+        </div>
+      </div>
+    </div>
+
+    <!-- <div class="navbar">
+      <div class="title">title : {{ title }}</div>
+    </div> -->
+  </section>
